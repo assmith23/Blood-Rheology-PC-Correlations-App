@@ -10,17 +10,17 @@ import json
 import joblib
 
 # Load your PCA data
-pca_model = joblib.load(os.path.expanduser(data_fp + "Data/pca_phys_model.pkl"))
-X_pca = np.load(os.path.expanduser(data_fp + "Data/pca_phys.npy"))
+pca_model = joblib.load(os.path.expanduser("Data/pca_phys_model.pkl"))
+X_pca = np.load(os.path.expanduser("Data/pca_phys.npy"))
 
 # Load rheological data
 rawRheo = pd.read_excel(
-    os.path.expanduser(data_fp + "Armstrong_tESSTV_simplified.xlsx"),
+    os.path.expanduser("Data/Armstrong_tESSTV_simplified.xlsx"),
     sheet_name="Rheology_forML"
 )
 
 # Load variable dictionaries
-with open(os.path.expanduser(data_fp + "rheology_variables.json"), 'r') as f:
+with open(os.path.expanduser("Data/rheology_variables.json"), 'r') as f:
     rheoDict = json.load(f)
 
 # Extract rheological parameters
