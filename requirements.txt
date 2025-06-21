@@ -1,7 +1,7 @@
 # Core data processing and scientific libraries
-numpy=1.26.4
-pandas=2.2.3
-polars=1.30.0
+numpy==1.26.4
+pandas==2.2.3
+polars==1.30.0
 scipy>=1.10.0
 scikit-learn>=1.2.0
 openpyxl>=3.1.5
@@ -53,7 +53,7 @@ pydantic>=1.10.0
 pillow>=9.4.0
 
 # Updated scikit-learn requirement
-scikit-learn=1.7.0  # Contains GaussianProcessRegressor, RandomForestRegressor, permutation_importance, etc.
+scikit-learn==1.7.0  # Contains GaussianProcessRegressor, RandomForestRegressor, permutation_importance, etc.
 
 # Dashboarding
 dash>=2.10.0  # For building interactive web applications
