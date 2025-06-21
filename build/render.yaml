@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: blood-rheology-explorer
+    env: python
+    plan: free  # Use free tier for research projects
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 8050
+    # Health check to ensure app stays running
+    healthCheckPath: /
+    
+    # Auto-deploy when you push to GitHub
+    autoDeploy: true
+    
+    # Resource limits for free tier
+    disk:
+      name: data
+      mountPath: /app/data
+      sizeGB: 1
