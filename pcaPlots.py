@@ -9,13 +9,9 @@ import os
 import json
 import joblib
 
-from supporting_functions import get_fp
-
-folder_fp, data_fp, figures_fp = get_fp('man_dtop')
-
 # Load your PCA data
-pca_model = joblib.load(os.path.expanduser(data_fp + "PCA/pca_phys_model.pkl"))
-X_pca = np.load(os.path.expanduser(data_fp + "PCA/pca_phys.npy"))
+pca_model = joblib.load(os.path.expanduser(data_fp + "Data/pca_phys_model.pkl"))
+X_pca = np.load(os.path.expanduser(data_fp + "Data/pca_phys.npy"))
 
 # Load rheological data
 rawRheo = pd.read_excel(
