@@ -302,11 +302,26 @@ if __name__ == '__main__':
     print(f"🔬 Analysis: Principal Component Analysis + Rheological Modeling")
     print(f"📈 Available correlations: {X_pca.shape[1] * len(rheology_params)} combinations")
     print("="*60)
-    print("🌐 Starting local web server...")
-    print("📱 Open your browser to: http://127.0.0.1:8050")
-    print("⚡ The app will automatically update when you change selections")
-    print("🛑 Press Ctrl+C to stop the server")
-    print("="*60)
     
-    # Run the app with debug mode for development
-    app.run(debug=True, host='127.0.0.1', port=8050)
+    # Configure for both local development and cloud deployment
+    # Render provides the PORT environment variable in production
+    import os
+    port = int(os.environ.get('PORT', 8050))  # Use Render's port or default to 8050 for local
+    
+    # Determine if we're running locally or in production
+    is_production = os.environ.get('RENDER') is not None
+    
+    if is_production:
+        print("🌐 Starting production server on Render...")
+        print("🔗 Application will be available at your Render URL")
+        # Production configuration: accept external connections, use Render's port
+        app.run(debug=False, host='0.0.0.0', port=port)
+    else:
+        print("🌐 Starting local development server...")
+        print("📱 Open your browser to: http://127.0.0.1:8050")
+        print("⚡ The app will automatically update when you change selections")
+        print("🛑 Press Ctrl+C to stop the server")
+        # Local development configuration: localhost only, debug mode enabled
+        app.run(debug=True, host='127.0.0.1', port=port)
+    
+    print("="*60)
