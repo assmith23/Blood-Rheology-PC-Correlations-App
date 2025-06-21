@@ -7,7 +7,7 @@ services:
     startCommand: python app.py
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.0
+        value: 3.12.3
       - key: PORT
         value: 8050
     # Health check to ensure app stays running
