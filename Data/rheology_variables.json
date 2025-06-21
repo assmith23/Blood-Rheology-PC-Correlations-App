@@ -1,0 +1,68 @@
+{
+  "Donor": {
+    "long_name": "donors",
+    "column_name": "donors",
+    "unit": null,
+    "usage": "NA"
+  },
+  "MU_0": {
+    "long_name": "Zero Shear Viscosity",
+    "column_name": "mu_0 (Pa s)",
+    "unit": "Pa s",
+    "usage": "NA"
+  },
+  "MU_INF": {
+    "long_name": "Infinite Shear Viscosity",
+    "column_name": "mu_inf (Pa s)",
+    "unit": "Pa s",
+    "usage": "NA"
+  },
+  "TAU_C": {
+    "long_name": "RBC Deformation TC (cross constant)",
+    "column_name": "tau_C (s)",
+    "unit": "s",
+    "usage": "NA"
+  },
+  "T_R1": {
+    "long_name": "Material constant for stress-induced breakdown",
+    "column_name": "t_r1 (s)",
+    "unit": "s",
+    "usage": "NA"
+  },
+  "T_R2": {
+    "long_name": "Material constant for stress-induced aggregation",
+    "column_name": "t_r2 (s)",
+    "unit": "s",
+    "usage": "NA"
+  },
+  "MU_R": {
+    "long_name": "Rouleaux Viscosity",
+    "column_name": "mu_R (Pa s)",
+    "unit": "Pa s",
+    "usage": "NA"
+  },
+  "SIGMA_Y0": {
+    "long_name": "Yield Stress",
+    "column_name": "sigma_y0 (Pa)",
+    "unit": "Pa",
+    "usage": "NA"
+  },
+  "TAU_LAM": {
+    "long_name": "Overall rouleaux rebuild time constant",
+    "column_name": "tau_lam (s)",
+    "unit": "s",
+    "usage": "NA"
+  },
+  "G_R": {
+    "long_name": "Rouleaux elastic modulus",
+    "column_name": "G_R (Pa)",
+    "unit": "Pa",
+    "usage": "NA"
+  },
+  "G_C": {
+    "long_name": "RBC elastic modulus",
+    "column_name": "G_C (Pa)",
+    "unit": "Pa",
+    "usage": "NA"
+  }
+}
